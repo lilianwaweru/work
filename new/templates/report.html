@@ -1,0 +1,39 @@
+{% load bootstrap4 %} {% load staticfiles %}
+
+
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">REPORT</h1>
+      <p class="lead"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="row">
+      <div class="col-md-4">
+
+        {% for work in works %}
+
+        <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th class="th-sm">Receipient</th>
+              <th class="th-sm">Sender</th>
+              <th class="th-sm">Subject</th>
+              <th class="th-sm">Body</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{work.receipient}}</td>
+              <td>{{work.sender}}</td>
+              <td>{{work.subject}}</td>
+              <td>{{work.body}}</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+
+    {% endfor %}

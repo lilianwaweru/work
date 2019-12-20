@@ -16,24 +16,34 @@ def welcome(request):
         body = request.POST.get("body")
         print (body)
         send_welcome_email(receipient,"",subject,body)
-
-        """
         if form.is_valid():
-            create = form.save(commit=False)
-            receipient = form.cleaned_data['receipient']
-            sender = form.cleaned_data['sender']
-            subject= form.cleaned_data['subject']
-            body = form.cleaned_data['body']
-            send_welcome_email(receipient,sender,subject,body)
+            create=form.save(commit=False)
             create.save()
-            
-            return redirect('welcome')"""
-
+        return redirect('report')
     else:
         form =  WorkForm()  
-
-    print(form)
     return render(request,'welcome.html',{"form":form})
+
+
+
+
+        # """
+        # if form.is_valid():
+        #     create = form.save(commit=False)
+        #     receipient = form.cleaned_data['receipient']
+        #     sender = form.cleaned_data['sender']
+        #     subject= form.cleaned_data['subject']
+        #     body = form.cleaned_data['body']
+        #     send_welcome_email(receipient,sender,subject,body)
+        #     create.save()
+            
+        #     return redirect('welcome')"""
+
+    
+def report(request):
+    works = Work.objects.all()
+    
+    return render(request,'report.html',{"works":works})
 
 
 
