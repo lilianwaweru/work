@@ -1,5 +1,33 @@
-<nav class="navbar navbar-expand-lg navbar-dark primary-color">
-    <a class="navbar-brand"  href="{% url 'report' %}">Neighbourhood</a>
+<nav class="navbar navbar-expand" >
+  <div class = "container">
+  <div class="navbar-header">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </div>
+  <div id="main-nav" class="collapse navbar-collapse navStyle">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+              <a class="nav-link" href="#">Gmail</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'report' %}">Report</a>
+        </li>
+          
+      </ul>
+  </div>
+</div>
+</nav>
+
+
+
+
+
+
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+    <a class="navbar-brand"  href="{% url 'report' %}"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -17,4 +45,7 @@
       </li>
     </ul>
   </div>
-</nav>
+  
+
+</nav> -->
+ 
